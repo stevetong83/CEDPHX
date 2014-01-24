@@ -1,0 +1,5 @@
+#menu
+  %ul
+    %li= link_to @cms_pages.root.label, @cms_pages.root.full_path
+    - @cms_pages.root.children.published.each do |page|
+      %li= link_to page.label, page.full_path
